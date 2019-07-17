@@ -55,6 +55,8 @@ const AuditRenderDetail = ({ detail }) => {
 		const postText = detail.substring(segmentIndex, detail.length);
 		return renderedDetail.concat(postText ? <span key={segmentIndex}>{postText}</span> : null);
 	}
+
+	return detail;
 };
 
 AuditRenderDetail.propTypes = {
@@ -72,6 +74,9 @@ function App() {
 			</div>
 			<div>
 				<AuditRenderDetail detail="Of the /experiments/home/ can be decorators so that audit /there/home/ or something." />
+			</div>
+			<div>
+				<AuditRenderDetail detail="Of the /experiments/ can be decorators so that audit or something." />
 			</div>
 			<span>++++</span>
 		</div>
